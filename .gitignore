@@ -1,3 +1,6 @@
 vendor/
 .bundle/
 .byebug_history
+node_modules/
+continente.json
+.vscode/

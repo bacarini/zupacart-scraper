@@ -1,0 +1,24 @@
+{
+  "name": "zupacart-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "continente": "node src/spiders/continente.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bacarini/zupacart-scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bacarini/zupacart-scraper/issues"
+  },
+  "homepage": "https://github.com/bacarini/zupacart-scraper#readme",
+  "dependencies": {
+    "playwright": "^1.8.1"
+  }
+}
