@@ -5,7 +5,9 @@ const producsToSearch = [
   'feijao'
 ]
 
-producsToSearch.forEach(producToSearch => {
-  console.log(`Start looking for ${producToSearch}`)
-  scrape(producToSearch)
-})
+await Promise.all(
+  productsToSearch.map(async (productToSearch) => {
+    console.log(`Start looking for ${productToSearch}`)
+    await scrape(producToSearch)
+  })
+)
