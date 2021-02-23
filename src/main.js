@@ -1,10 +1,6 @@
 const scrape = require('./spiders/continente')
 
-const productsToSearch = [
-  'arroz',
-  'feijao'
-]
-
+var productsToSearch = process.argv.slice(2);
 const main = async (productsToSearch) => {
   await Promise.all(
     productsToSearch.map(async (productToSearch) => {
