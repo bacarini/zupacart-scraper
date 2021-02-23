@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/bacarini/zupacart-scraper#readme",
   "dependencies": {
+    "pg": "^8.0.3",
     "playwright-firefox": "^1.8.1"
   }
 }

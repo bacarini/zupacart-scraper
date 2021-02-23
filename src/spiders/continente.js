@@ -51,7 +51,7 @@ const scrape = async (productToSearch) => {
   } while (paginate)
 
   console.log(`Total product scraped: ${data.flat().length}`)
-  const dataJSON = JSON.stringify(data.flat())
+  return data.flat();
 }
 
 module.exports = scrape;
