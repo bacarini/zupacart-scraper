@@ -1,11 +1,11 @@
-const { chromium } = require('playwright');
+const { chromium } = require('playwright-chromium');
 
 const scrape = async (productToSearch) => {
   let data = []
 
   const browser = await chromium.launch({
     headless: true,
-    args: ["--no-sandbox"]
+    chromiumSandbox: false
   });
   const page = await browser.newPage();
 
