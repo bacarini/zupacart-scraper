@@ -50,7 +50,7 @@ const scrape = async (productToSearch) => {
       })
   } while (paginate)
 
-  console.log(`Total prodtcs scraped: ${data.flat().length}`)
+  console.log(`Total product scraped: ${data.flat().length}`)
   const dataJSON = JSON.stringify(data.flat())
 }
 

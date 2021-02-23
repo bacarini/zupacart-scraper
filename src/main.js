@@ -6,5 +6,6 @@ const producsToSearch = [
 ]
 
 producsToSearch.forEach(producToSearch => {
+  console.log(`Start looking for ${producToSearch}`)
   scrape(producToSearch)
 })
