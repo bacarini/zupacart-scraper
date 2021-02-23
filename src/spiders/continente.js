@@ -55,7 +55,6 @@ const scrape = async (productToSearch) => {
 
   console.log(`Total prodtcs scraped: ${data.flat().length}`)
   const dataJSON = JSON.stringify(data.flat())
-  // console.log(dataJSON)
 }
 
 module.exports = scrape;
