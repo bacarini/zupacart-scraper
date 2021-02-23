@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "schedule": "node src/main.js"
+    "worker": "node src/main.js"
   },
   "repository": {
     "type": "git",
