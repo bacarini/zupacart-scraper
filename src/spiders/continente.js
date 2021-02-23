@@ -1,24 +1,25 @@
 const { webkit } = require('playwright-webkit');
 
 const scrape = async (productToSearch) => {
-  let data = []
+  let data = [];
   const browser = await webkit.launch();
+
   const page = await browser.newPage();
   await page.goto(`https://www.continente.pt/stores/continente/pt-pt/public/Pages/searchResults.aspx?k=${productToSearch}#/?page=1&pl=80`);
-  await page.setDefaultNavigationTimeout(90000)
+  await page.setDefaultNavigationTimeout(90000);
 
-  let paginate = true
+  let paginate = true;
 
   do {
     await page.waitForLoadState('domcontentloaded');
     const productEvaluated = await page.evaluate(() => {
-      let productExtracted = []
+      let productExtracted = [];
       const parsePrice = (regex, text) => {
-        const matchData = regex.exec(text)
+        const matchData = regex.exec(text);
         if (!matchData) {
-          return 0
+          return 0;
         }
-        const price = parseFloat(matchData[1].replace(',', '.'))
+        const price = parseFloat(matchData[1].replace(',', '.'));
         return price;
       }
 
