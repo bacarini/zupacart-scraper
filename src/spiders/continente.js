@@ -2,13 +2,12 @@ const { chromium } = require('playwright-chromium');
 
 const scrape = async (productToSearch) => {
   let data = []
-
   const browser = await chromium.launch({
     headless: true,
     chromiumSandbox: false
   });
-  const page = await browser.newPage();
 
+  const page = await browser.newPage();
   await page.goto(`https://www.continente.pt/stores/continente/pt-pt/public/Pages/searchResults.aspx?k=${productToSearch}#/?page=1&pl=80`);
   await page.setDefaultNavigationTimeout(90000)
 
