@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "continente": "node src/spiders/continente.js"
+    "schedule": "node src/main.js"
   },
   "repository": {
     "type": "git",
