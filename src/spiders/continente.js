@@ -4,7 +4,8 @@ const scrape = async (productToSearch) => {
   let data = []
 
   const browser = await chromium.launch({
-    headless: true
+    headless: true,
+    args: ["--no-sandbox"]
   });
   const page = await browser.newPage();
 
