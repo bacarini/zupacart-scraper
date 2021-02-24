@@ -11,7 +11,6 @@ const main = async (productsToSearch) => {
       data.forEach((item) => {
         const values = [item.productName, item.productURL, item.productBrand, item.productPrice, item.productPricePerKg];
         db.query('INSERT INTO products(name, url, brand, price, price_per_kilo) VALUES($1, $2, $3, $4, $5) RETURNING *', values)
-          .then(res => console.log(res.rows[0]))
           .catch(e => console.error(e.stack))
       });
     })
